@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import devmysite.my_settings
+from os.path import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 사용자 생성 app 추가
     'user',
+    'board',
 ]
 
 MIDDLEWARE = [
@@ -58,7 +60,10 @@ ROOT_URLCONF = 'devmysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # template 경로 설정
+        'DIRS': [ 
+            os.path.join(BASE_DIR, 'templates') 
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

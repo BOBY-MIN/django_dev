@@ -86,18 +86,6 @@ class AuthUserUserPermissions(models.Model):
         unique_together = (('user', 'permission'),)
 
 
-class DevBoardBsc(models.Model):
-    title = models.CharField(max_length=200)
-    content = models.TextField()
-    hit = models.DecimalField(max_digits=10, decimal_places=0)
-    insert_dt = models.DateTimeField()
-    update_dt = models.DateTimeField()
-
-    class Meta:
-        managed = False
-        db_table = 'dev_board_bsc'
-
-
 class DevUserBsc(models.Model):
     mem_sno = models.DecimalField(db_column='MEM_SNO', primary_key=True, max_digits=20, decimal_places=0)  # Field name made lowercase.
     mem_curhold_sum = models.DecimalField(db_column='MEM_CURHOLD_SUM', max_digits=18, decimal_places=0, blank=True, null=True)  # Field name made lowercase.
