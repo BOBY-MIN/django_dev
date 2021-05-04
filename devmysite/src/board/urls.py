@@ -13,4 +13,7 @@ urlpatterns = [
         path('', views.index),
         path('post', views.post),
         path('detail/<int:id>', views.detail),
+        path('delete/<int:id>', views.delete),
+        path('modify/<int:id>', views.modify),
+        path('update', views.update),
     ]
