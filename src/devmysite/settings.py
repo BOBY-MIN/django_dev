@@ -14,6 +14,10 @@ from pathlib import Path
 import devmysite.my_settings
 from os.path import os
 
+
+CELERY_BROKER_URL = 'amqp://guest:guest@localhost'
+CELERY_RESULT_BACKEND = 'rpc://'
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -43,6 +47,7 @@ INSTALLED_APPS = [
     # 사용자 생성 app 추가
     'user',
     'board',
+    'celerytest',
 ]
 
 MIDDLEWARE = [
