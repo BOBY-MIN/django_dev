@@ -1,9 +1,10 @@
-from django.shortcuts import render
 from django.http import HttpResponseRedirect, Http404
+from django.shortcuts import render
 
 from board.models import DevBoardBsc
-# Create your views here.
 
+
+# Create your views here.
 def index(request):
     boards = {'boards': DevBoardBsc.objects.all()}
     return render(request, 'board/board_list.html', boards)

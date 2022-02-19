@@ -15,7 +15,7 @@ import devmysite.my_settings
 from os.path import os
 
 
-CELERY_BROKER_URL = 'amqp://guest:guest@localhost'
+CELERY_BROKER_URL = 'amqp://lleducator:deEnter38@localhost'
 CELERY_RESULT_BACKEND = 'rpc://'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
