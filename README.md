@@ -60,6 +60,15 @@ $ docker start 컨테이너이름
 ```
 
 
+#### server 실행
+
+```
+-- 서버 수행
+$ python manage.py runserver
+
+```
+
+
 #### celery 실행 모음
 
 ```
