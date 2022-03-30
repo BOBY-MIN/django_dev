@@ -66,6 +66,9 @@ $ docker start 컨테이너이름
 -- 서버 수행
 $ python manage.py runserver
 
+-- DB Mig
+$ python manage.py migrate
+
 ```
 
 
